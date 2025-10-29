@@ -1,0 +1,6 @@
+libs/*
+target/*
+build/*
+cache/*
+plugins/*
+reports/*

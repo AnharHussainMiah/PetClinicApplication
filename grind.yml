@@ -1,0 +1,69 @@
+project:
+  groupId: org.springframework.samples.petclinic
+  artifactId: PetClinicApplication
+  version: 1.0.0
+  name: My App
+  description: Update me!
+  dependencies:
+  - groupId: org.springframework.boot
+    artifactId: spring-boot-starter-cache
+    version: 4.0.0-RC1
+    scope: runtime
+  - groupId: org.springframework.boot
+    artifactId: spring-boot-starter-data-jpa
+    version: 4.0.0-RC1
+    scope: runtime
+  - groupId: org.springframework.boot
+    artifactId: spring-boot-starter-web
+    version: 4.0.0-RC1
+    scope: runtime
+  - groupId: org.springframework.boot
+    artifactId: spring-boot-starter-thymeleaf
+    version: 4.0.0-RC1
+    scope: runtime
+  - groupId: com.github.ben-manes.caffeine
+    artifactId: caffeine
+    version: 3.2.2
+    scope: runtime
+  - groupId: jakarta.xml.bind
+    artifactId: jakarta.xml.bind-api
+    version: 4.0.4
+    scope: runtime
+  - groupId: javax.cache
+    artifactId: cache-api
+    version: 1.1.1
+    scope: runtime
+  - groupId: org.springframework.boot
+    artifactId: spring-boot-starter-validation
+    version: 4.0.0-RC1
+    scope: runtime
+  - groupId: org.springframework.boot
+    artifactId: spring-boot-starter-actuator
+    version: 4.0.0-RC1
+    scope: runtime
+  - groupId: org.springframework.boot
+    artifactId: spring-boot-starter
+    version: 4.0.0-RC1
+    scope: runtime
+  - groupId: com.h2database
+    artifactId: h2
+    version: 2.4.240
+    scope: runtime
+  - groupId: org.hibernate.models
+    artifactId: hibernate-models
+    version: 1.0.1
+    scope: runtime
+  - groupId: net.bytebuddy
+    artifactId: byte-buddy
+    version: 1.17.8
+    scope: runtime
+  tasks:
+    clean: rm -rf target/
+    jar: grind build prod
+  profiles:
+    dev:
+      flags:
+        - -parameters
+    prod:
+      flags:
+        - -parameters
